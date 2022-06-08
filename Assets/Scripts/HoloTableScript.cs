@@ -9,7 +9,9 @@ public class HoloTableScript : MonoBehaviour
     [SerializeField] GameObject MainBuilding;
     [SerializeField] GameObject Window;
     [SerializeField] GameObject Car;
+    [SerializeField] GameObject CarFrame;
     [SerializeField] Animator animationController;
+    [SerializeField] GameObject Room;
    
 
 
@@ -18,6 +20,8 @@ public class HoloTableScript : MonoBehaviour
     {
         Car.SetActive(true);
         Window.SetActive(true);
+        Room.SetActive(true);
+        CarFrame.SetActive(true);
         animationController.SetBool("StartZoomToRoom", true);
         Debug.Log(animationController.GetBool("ZoomToRoom"));
         Debug.Log("Zzooom");
@@ -53,22 +57,31 @@ public class HoloTableScript : MonoBehaviour
         {
             switch (hit.collider.tag)
             {
-                case "Building":
+                case "Room":
                     //MainBuilding do stuff;
-                    Debug.Log("Building case triggered");
-                    //animatorRoomZoom.Play("ZoomToRoom");
-                    Car.SetActive(true);
-                    Window.SetActive(true);
                     Debug.Log("Building hit");
+
+                    animationController.SetBool("StartZoomToRoom", true);
+                    Window.SetActive(true);
+                    Room.SetActive(true);
+                    CarFrame.SetActive(true);
+    
                     break;
 
                 case "Window":
                     //Window do stuff;
                     Debug.Log("Window hit");
+
+                    //zoomanimation
                     break;
 
-                case "Car":
+                case "CarFrame":
                     //Car do stuff;
+
+                    Car.SetActive(true);
+                    //car animation zoom 
+                    //car driving
+
                     Debug.Log("Car hit");
                     break;
             }
