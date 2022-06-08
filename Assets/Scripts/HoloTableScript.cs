@@ -18,13 +18,7 @@ public class HoloTableScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Car.SetActive(true);
-        Window.SetActive(true);
-        Room.SetActive(true);
-        CarFrame.SetActive(true);
-        animationController.SetBool("StartZoomToRoom", true);
-        Debug.Log(animationController.GetBool("ZoomToRoom"));
-        Debug.Log("Zzooom");
+       
         //animateRoomZoom.Play("ZoomToRoom");
         //animatorRoomZoom.Play("ZoomToRoom");
 
