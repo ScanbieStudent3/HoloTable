@@ -41,7 +41,7 @@ public class HoloTableScript : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(tempRay.origin, tempRay.direction, out hit, Mathf.Infinity) && tempHoloTrackWand.IsButtonAPressed())
         {
-            switch (hit.rigidbody.tag)
+            switch (hit.collider.tag)
             {
                 case "Building":
                     //MainBuilding do stuff;
