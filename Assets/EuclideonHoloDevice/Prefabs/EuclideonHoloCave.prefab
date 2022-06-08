@@ -2692,10 +2692,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1580301895916789958}
     m_Modifications:
-    - target: {fileID: 8160817383737747161, guid: 54af3083b2956d94099cf49aea9f7452, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3258865133911082008, guid: b1acefba7a9eb6a4a92985bf0a14c15f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2742,6 +2738,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3258865133911082013, guid: b1acefba7a9eb6a4a92985bf0a14c15f, type: 3}
       propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160817383737747161, guid: 54af3083b2956d94099cf49aea9f7452, type: 3}
+      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

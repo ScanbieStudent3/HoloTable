@@ -6,6 +6,8 @@ TagManager:
   tags:
   - HoloUser
   - Building
+  - Window
+  - Car
   layers:
   - Default
   - TransparentFX
