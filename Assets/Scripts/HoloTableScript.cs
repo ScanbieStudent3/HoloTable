@@ -13,8 +13,6 @@ public class HoloTableScript : MonoBehaviour
     [SerializeField] Animator animationController;
     [SerializeField] GameObject Room;
    
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -63,12 +61,18 @@ public class HoloTableScript : MonoBehaviour
                     Window.SetActive(true);
                     Room.SetActive(true);
                     CarFrame.SetActive(true);
-    
+                    Car.SetActive(false);
+
                     break;
 
                 case "Window":
                     //Window do stuff;
                     Debug.Log("Window hit");
+
+                    Window.SetActive(true);
+                    Room.SetActive(false);
+                    CarFrame.SetActive(false);
+                    Car.SetActive(false);
 
                     //zoomanimation
                     break;
@@ -76,6 +80,9 @@ public class HoloTableScript : MonoBehaviour
                 case "CarFrame":
                     //Car do stuff;
 
+                    Window.SetActive(false);
+                    Room.SetActive(false);
+                    CarFrame.SetActive(false);
                     Car.SetActive(true);
                     //car animation zoom 
                     //car driving

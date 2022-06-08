@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -277,6 +277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
+--- !u!1 &862823913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3486433717550314094, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
+  m_PrefabInstance: {fileID: 3486433717900295289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1042971497
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +700,7 @@ MonoBehaviour:
   MainBuilding: {fileID: 2058831249}
   Window: {fileID: 1074118048}
   Car: {fileID: 1342379915}
-  CarFrame: {fileID: 0}
+  CarFrame: {fileID: 862823913}
   animationController: {fileID: 2058831251}
   Room: {fileID: 1198876940}
 --- !u!1001 &3486433717900295289
