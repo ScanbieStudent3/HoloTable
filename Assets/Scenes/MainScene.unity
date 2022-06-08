@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1d1092370fd2e44b90eb8d7c64d4b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &406179378
+--- !u!1001 &614519600
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -143,31 +143,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.43275604
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.43275604
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.43275604
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0076401
+      value: -0.395
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03028
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0023478
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalRotation.w
@@ -199,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_Name
-      value: MainBuilding
+      value: 20220512_LivingTomorrow_TheBuilding_A001 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
@@ -294,7 +294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1153983566
 GameObject:
@@ -412,11 +412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2143205528758748141, guid: 444fb279ba15d7040a74a91bf7afbfb9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2143205528758748141, guid: 444fb279ba15d7040a74a91bf7afbfb9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 2143205528758748141, guid: 444fb279ba15d7040a74a91bf7afbfb9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -503,6 +503,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1d1092370fd2e44b90eb8d7c64d4b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2058831249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
+  m_PrefabInstance: {fileID: 614519600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2058831251
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058831249}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 55b0e889f531f4342bf932b732756958, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2110533194 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1354632003963799290, guid: 444fb279ba15d7040a74a91bf7afbfb9, type: 3}
@@ -522,4 +546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holoTrackWand_0: {fileID: 163299455}
   holoTrackWand_1: {fileID: 1913776898}
-  LTBuilding: {fileID: 0}
+  MainBuilding: {fileID: 0}
+  Window: {fileID: 0}
+  Car: {fileID: 0}
+  animateRoomZoom: {fileID: 0}
+  animatorRoomZoom: {fileID: 0}
