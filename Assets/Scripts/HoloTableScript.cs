@@ -28,7 +28,7 @@ public class HoloTableScript : MonoBehaviour
 
         if (Physics.Raycast(tempRay.origin, tempRay.direction, out hit, Mathf.Infinity))
         {
-
+            
         }
 
         Debug.DrawRay(tempRay.origin, tempRay.direction * 10000f, Color.yellow);
