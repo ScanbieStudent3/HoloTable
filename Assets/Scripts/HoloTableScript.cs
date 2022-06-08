@@ -28,6 +28,10 @@ public class HoloTableScript : MonoBehaviour
     void Update()
     {
         //animationController.SetBool("startZoomToRoom", true);
+        if (holoTrackWand_0.IsButtonBPressed() || holoTrackWand_1.IsButtonBPressed() || Input.GetKeyDown("a"))
+        {
+            animationController.SetBool("StartZoomOutToRoom", true);
+        }
         if (IsWandPointingAtCollider());
     }
 
