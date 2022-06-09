@@ -134,24 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1d1092370fd2e44b90eb8d7c64d4b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &559299409 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2335407129733784817, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
-  m_PrefabInstance: {fileID: 3486433717900295289}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &559299410
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559299409}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.43, y: 0.98, z: 1}
-  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!1001 &614519600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,15 +147,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6552085
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6552085
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.6552085
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,6 +259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7d74ef20c7b92240adf5e853b054d63, type: 3}
+--- !u!95 &850884004 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8173023682089554332, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
+  m_PrefabInstance: {fileID: 3486433717900295289}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &862823913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3486433717550314094, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
@@ -701,7 +688,9 @@ MonoBehaviour:
   Window: {fileID: 1074118048}
   Car: {fileID: 1342379915}
   CarFrame: {fileID: 862823913}
-  animationController: {fileID: 2058831251}
+  animationController_Building: {fileID: 2058831251}
+  animationController_Car: {fileID: 3486433717900295290}
+  animationController_Window: {fileID: 850884004}
   Room: {fileID: 1198876940}
 --- !u!1001 &3486433717900295289
 PrefabInstance:
@@ -740,15 +729,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3486433717664137055, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.436
+      value: 0.646
       objectReference: {fileID: 0}
     - target: {fileID: 3486433717664137055, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.744
+      value: 1.2093
       objectReference: {fileID: 0}
     - target: {fileID: 3486433717664137055, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.191
+      value: 0.142
       objectReference: {fileID: 0}
     - target: {fileID: 3486433717664137055, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -784,3 +773,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
+--- !u!95 &3486433717900295290 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6490886145027593172, guid: daf5fb75f1ff48942afe478593a8183b, type: 3}
+  m_PrefabInstance: {fileID: 3486433717900295289}
+  m_PrefabAsset: {fileID: 0}

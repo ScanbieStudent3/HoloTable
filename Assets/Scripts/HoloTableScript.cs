@@ -10,27 +10,70 @@ public class HoloTableScript : MonoBehaviour
     [SerializeField] GameObject Window;
     [SerializeField] GameObject Car;
     [SerializeField] GameObject CarFrame;
-    [SerializeField] Animator animationController;
+    [SerializeField] Animator animationController_Building;
+    [SerializeField] Animator animationController_Car;
+    [SerializeField] Animator animationController_Window;
     [SerializeField] GameObject Room;
    
     // Start is called before the first frame update
     void Start()
     {
-       
-        //animateRoomZoom.Play("ZoomToRoom");
-        //animatorRoomZoom.Play("ZoomToRoom");
+        Window.SetActive(true);
+        Room.SetActive(true);
+        CarFrame.SetActive(true);
+        Car.SetActive(false);
 
+        animationController_Building.SetBool("StartZoomOutToRoom", false);
+        animationController_Building.SetBool("StartZoomToRoom", false);
+        animationController_Car.SetBool("Loop", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //animationController.SetBool("startZoomToRoom", true);
-        if (holoTrackWand_0.IsButtonBPressed() || holoTrackWand_1.IsButtonBPressed() || Input.GetKeyDown("a"))
+        if (holoTrackWand_0.IsButtonBPressed() || holoTrackWand_1.IsButtonBPressed() || Input.GetKeyDown("b"))
         {
-            animationController.SetBool("StartZoomOutToRoom", true);
+            if (animationController_Car.GetBool("Loop"))
+            {
+                Window.SetActive(true);
+                Room.SetActive(true);
+                CarFrame.SetActive(true);
+                Car.SetActive(false);
+
+                animationController_Building.SetBool("StartZoomOutToRoom", false);
+                animationController_Building.SetBool("StartZoomToRoom", true);
+
+                animationController_Car.SetBool("Loop", false);
+                animationController_Building.SetBool("StartZoomToRoom", false);
+            }
+            else if (animationController_Building.GetBool("WindowAnimation"))
+            {
+                Window.SetActive(true);
+                Room.SetActive(true);
+                CarFrame.SetActive(true);
+                Car.SetActive(false);
+
+                animationController_Building.SetBool("StartZoomOutToRoom", false);
+                animationController_Building.SetBool("StartZoomToRoom", true);
+
+                animationController_Car.SetBool("Loop", false);
+            }
+            else if (animationController_Window.GetBool("StartZoomToRoom"))
+            {
+                Window.SetActive(true);
+                Room.SetActive(true);
+                CarFrame.SetActive(true);
+                Car.SetActive(false);
+
+                animationController_Building.SetBool("StartZoomOutToRoom", true);
+                animationController_Building.SetBool("StartZoomToRoom", false);
+
+                animationController_Car.SetBool("Loop", false);
+
+            }
         }
-        if (IsWandPointingAtCollider());
+
+        IsWandPointingAtCollider();
     }
 
     bool IsWandPointingAtCollider()
@@ -49,52 +92,57 @@ public class HoloTableScript : MonoBehaviour
         Ray tempRay = tempHoloTrackWand.GetRay();
 
         RaycastHit hit;
-        if (Physics.Raycast(tempRay.origin, tempRay.direction, out hit, Mathf.Infinity) /*&& tempHoloTrackWand.IsButtonAPressed()*/)
+        if (Physics.Raycast(tempRay.origin, tempRay.direction, out hit, Mathf.Infinity) && (tempHoloTrackWand.IsButtonAPressed() || tempHoloTrackWand.IsButtonBPressed() || Input.GetKeyDown("a")))
         {
             switch (hit.collider.tag)
             {
                 case "Room":
-                    //MainBuilding do stuff;
-                    Debug.Log("Building hit");
-
-                    animationController.SetBool("StartZoomToRoom", true);
                     Window.SetActive(true);
                     Room.SetActive(true);
                     CarFrame.SetActive(true);
                     Car.SetActive(false);
 
+                    animationController_Building.SetBool("StartZoomOutToRoom", false);
+                    animationController_Building.SetBool("StartZoomToRoom", true);
+
+                    animationController_Window.SetBool("WindowAnimation", false);
+                    animationController_Car.SetBool("Loop", false);
+
                     break;
 
                 case "Window":
-                    //Window do stuff;
-                    Debug.Log("Window hit");
-
                     Window.SetActive(true);
                     Room.SetActive(false);
                     CarFrame.SetActive(false);
                     Car.SetActive(false);
 
-                    //zoomanimation
+
+                    animationController_Building.SetBool("StartZoomOutToRoom", false);
+                    animationController_Building.SetBool("StartZoomToRoom", false);
+
+                    animationController_Window.SetBool("WindowAnimation", true);
+                    animationController_Car.SetBool("Loop", false);
+
                     break;
 
                 case "CarFrame":
-                    //Car do stuff;
-
                     Window.SetActive(false);
                     Room.SetActive(false);
                     CarFrame.SetActive(false);
                     Car.SetActive(true);
-                    //car animation zoom 
-                    //car driving
 
-                    Debug.Log("Car hit");
+
+                    animationController_Building.SetBool("StartZoomOutToRoom", false);
+                    animationController_Building.SetBool("StartZoomToRoom", false);
+
+                    animationController_Window.SetBool("WindowAnimation", false);
+                    animationController_Car.SetBool("Loop", true);
+
                     break;
             }
 
             return true;
         }
-
-        Debug.DrawRay(tempRay.origin, tempRay.direction * 10000f, Color.yellow);
 
         return false;
     }
