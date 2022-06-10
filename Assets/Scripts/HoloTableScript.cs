@@ -24,6 +24,8 @@ public class HoloTableScript : MonoBehaviour
     [SerializeField] GameObject Room;
     State state = State.Building;
 
+    bool gamePaused = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +42,7 @@ public class HoloTableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("a") || Input.GetKeyDown("c") || holoTrackWand_0.IsButtonBPressed() || holoTrackWand_1.IsButtonBPressed() || holoTrackWand_0.IsButtonAPressed() || holoTrackWand_1.IsButtonAPressed())
+        if (Input.GetKeyDown("a") || holoTrackWand_0.IsButtonAPressed() || holoTrackWand_1.IsButtonAPressed())
         {
             switch(state)
             {
@@ -94,7 +96,6 @@ public class HoloTableScript : MonoBehaviour
 
                     break;
 
-
                 case State.Car:
                     Window.SetActive(false);
                     Room.SetActive(true);
@@ -113,47 +114,47 @@ public class HoloTableScript : MonoBehaviour
             }
         }
 
-        if (holoTrackWand_0.IsButtonBPressed() || holoTrackWand_1.IsButtonBPressed() || Input.GetKeyDown("b"))
-        {
-            if (animationController_Car.GetBool("Loop"))
-            {
-                Window.SetActive(true);
-                Room.SetActive(true);
-                CarFrame.SetActive(true);
-                Car.SetActive(false);
+        //if (holoTrackWand_0.IsButtonBPressed() || holoTrackWand_1.IsButtonBPressed() || Input.GetKeyDown("b"))
+        //{
+        //    if (animationController_Car.GetBool("Loop"))
+        //    {
+        //        Window.SetActive(true);
+        //        Room.SetActive(true);
+        //        CarFrame.SetActive(true);
+        //        Car.SetActive(false);
 
-                animationController_Building.SetBool("StartZoomOutToRoom", false);
-                animationController_Building.SetBool("StartZoomToRoom", true);
+        //        animationController_Building.SetBool("StartZoomOutToRoom", false);
+        //        animationController_Building.SetBool("StartZoomToRoom", true);
 
-                animationController_Car.SetBool("Loop", false);
-                animationController_Building.SetBool("StartZoomToRoom", false);
-            }
-            else if (animationController_Building.GetBool("WindowAnimation"))
-            {
-                Window.SetActive(true);
-                Room.SetActive(true);
-                CarFrame.SetActive(true);
-                Car.SetActive(false);
+        //        animationController_Car.SetBool("Loop", false);
+        //        animationController_Building.SetBool("StartZoomToRoom", false);
+        //    }
+        //    else if (animationController_Building.GetBool("WindowAnimation"))
+        //    {
+        //        Window.SetActive(true);
+        //        Room.SetActive(true);
+        //        CarFrame.SetActive(true);
+        //        Car.SetActive(false);
 
-                animationController_Building.SetBool("StartZoomOutToRoom", false);
-                animationController_Building.SetBool("StartZoomToRoom", true);
+        //        animationController_Building.SetBool("StartZoomOutToRoom", false);
+        //        animationController_Building.SetBool("StartZoomToRoom", true);
 
-                animationController_Car.SetBool("Loop", false);
-            }
-            else if (animationController_Window.GetBool("StartZoomToRoom"))
-            {
-                Window.SetActive(true);
-                Room.SetActive(true);
-                CarFrame.SetActive(true);
-                Car.SetActive(false);
+        //        animationController_Car.SetBool("Loop", false);
+        //    }
+        //    else if (animationController_Window.GetBool("StartZoomToRoom"))
+        //    {
+        //        Window.SetActive(true);
+        //        Room.SetActive(true);
+        //        CarFrame.SetActive(true);
+        //        Car.SetActive(false);
 
-                animationController_Building.SetBool("StartZoomOutToRoom", true);
-                animationController_Building.SetBool("StartZoomToRoom", false);
+        //        animationController_Building.SetBool("StartZoomOutToRoom", true);
+        //        animationController_Building.SetBool("StartZoomToRoom", false);
 
-                animationController_Car.SetBool("Loop", false);
+        //        animationController_Car.SetBool("Loop", false);
 
-            }
-        }
+        //    }
+        //}
 
         IsWandPointingAtCollider();
     }
