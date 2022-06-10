@@ -27,7 +27,7 @@ MonoBehaviour:
   ControlModeButton: 1
   AddAudioListeners: 1
   SmoothTrackedPoints: 1
-  ShowCalibrationScreen: 1
+  ShowCalibrationScreen: 0
   ShowUserLasers: 1
   DebugSurfaceView: -1
   EnableDebugUserController: 0

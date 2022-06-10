@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//temp code for demo
 enum State
 {
     Building,
@@ -22,8 +23,9 @@ public class HoloTableScript : MonoBehaviour
     [SerializeField] Animator animationController_Car;
     [SerializeField] Animator animationController_Window;
     [SerializeField] GameObject Room;
-    State state = State.Building;
 
+    //temp code for demo
+    State state = State.Building;
     bool gamePaused = true;
 
     // Start is called before the first frame update
@@ -42,6 +44,8 @@ public class HoloTableScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //temp code for demo
         if (Input.GetKeyDown("a") || holoTrackWand_0.IsButtonAPressed() || holoTrackWand_1.IsButtonAPressed())
         {
             switch(state)
@@ -102,8 +106,8 @@ public class HoloTableScript : MonoBehaviour
                     CarFrame.SetActive(true);
                     Car.SetActive(false);
 
-                    animationController_Building.SetBool("StartZoomToRoom", true);
-                    animationController_Building.SetBool("StartZoomOutToRoom", false);
+                    animationController_Building.SetBool("StartZoomToRoom", false);
+                    animationController_Building.SetBool("StartZoomOutToRoom", true);
 
                     animationController_Car.SetBool("Loop", false);
                     animationController_Window.SetBool("WindowAnimation", false);
@@ -114,6 +118,7 @@ public class HoloTableScript : MonoBehaviour
             }
         }
 
+        //code to revert 1 stage uncomment when demo code is deleted
         //if (holoTrackWand_0.IsButtonBPressed() || holoTrackWand_1.IsButtonBPressed() || Input.GetKeyDown("b"))
         //{
         //    if (animationController_Car.GetBool("Loop"))
